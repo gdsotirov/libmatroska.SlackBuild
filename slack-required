@@ -1,4 +1,4 @@
 cxxlibs >= 6.0.13 | gcc-g++ >= 4.4.4
 gcc >= 4.4.4
 glibc-solibs >= 2.11.1
-libebml >= 1.0.0
+libebml >= 1.2.0
