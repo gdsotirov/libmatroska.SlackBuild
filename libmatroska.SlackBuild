@@ -19,13 +19,13 @@
 #
 # Visit SlackPack at http://sotirov-bg.net/slackpack/
 #
-# $Id: libmatroska.SlackBuild,v 1.4 2016/09/01 15:56:58 gsotirov Exp $
+# $Id: libmatroska.SlackBuild,v 1.5 2016/09/01 16:07:23 gsotirov Exp $
 #
 
 . ../../slack-package.conf
 
 NAME=libmatroska
-VERSION=1.4.1
+VERSION=1.4.2
 ARCH=${ARCH:-i486}
 BUILD=${BUILD:-1}
 
@@ -52,14 +52,23 @@ mkdir -p $PKG
 # Extract and fix source
 cd $TMP
 tar -xvf $CWD/$NAME-$VERSION.tar.?z* || exit 3
-cd $SRC/make/linux
+cd $SRC
 fix_source
 
 # Configure, make & install
 CFLAGS=$SLKCFLAGS \
 CXXFLAGS=$SLKCFLAGS \
-make -j4 || exit 4
-make prefix=$PKG/usr libdir=$PKG/usr/lib$LIBDIRSUFFIX install || exit 5
+./configure --build=$ARCH-slackware-linux \
+            --host=$ARCH-slackware-linux \
+            --prefix=/usr \
+            --libdir=/usr/lib${LIBDIRSUFFIX} \
+            --docdir=/usr/doc/$NAME-$VERSION \
+            --mandir=/usr/man \
+            --enable-shared=yes \
+            --enable-static=no || exit 4
+
+make -j4 || exit 5
+make DESTDIR=$PKG install || exit 6
 
 # Prepare
 ( cd $PKG; strip_lib )
