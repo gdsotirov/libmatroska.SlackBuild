@@ -1,7 +1,7 @@
 #!/bin/sh
 #
 # Slackware build script for LibMatroska
-# Copyright (C) 2010,2011 Georgi D. Sotirov <gdsotirov@dir.bg>
+# Copyright (C) 2010-2016 Georgi D. Sotirov <gdsotirov@dir.bg>
 #
 # This program is free software; you can redistribute it and/or
 # modify it under the terms of the GNU General Public License
@@ -19,13 +19,13 @@
 #
 # Visit SlackPack at http://sotirov-bg.net/slackpack/
 #
-# $Id: libmatroska.SlackBuild,v 1.3 2012/02/19 09:07:17 gsotirov Exp $
+# $Id: libmatroska.SlackBuild,v 1.4 2016/09/01 15:56:58 gsotirov Exp $
 #
 
 . ../../slack-package.conf
 
 NAME=libmatroska
-VERSION=1.3.0
+VERSION=1.4.1
 ARCH=${ARCH:-i486}
 BUILD=${BUILD:-1}
 
