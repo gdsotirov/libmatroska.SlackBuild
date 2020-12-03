@@ -4,8 +4,8 @@ libmatroska: Matroska is aiming to become the standard of Multimedia
 libmatroska: Container Formats one day.  It is based on EBML (Extensible
 libmatroska: Binary Meta Language), a kind of binary version of XML.  This
 libmatroska: way the significant advantages in terms of future format
-libmatroska: extensability are gained without breaking file support in old
-libmatroska: parsers. 
+libmatroska: extensibility are gained without breaking file support in old
+libmatroska: parsers.
 libmatroska:
 libmatroska:
-libmatroska: Packaged by Georgi D. Sotirov <gdsotirov@dir.bg>
+libmatroska: Packaged by Georgi D. Sotirov <gdsotirov@gmail.com>
